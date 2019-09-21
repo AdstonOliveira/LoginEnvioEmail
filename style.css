@@ -1,0 +1,14 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap');
+
+html{
+    width: 100vw; height: 100vh;
+}
+body{
+    width: 100%; height: 100%;
+    border: 1px solid red;
+    
+}
+h3{
+    font-family: 'Mansalva', cursive;
+}

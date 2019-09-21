@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<
+  <div class="container col-6 h-100">
+      <div class="d-flex h-100 align-items-center justify-content-around">
+          <div class="h-50 col-8 rounded">
 
+              <div class="card">
+                    <h3 class="card-header">Login</h3>
+                <div class="card-body">
+                    <form action="">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Usuario" />
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name="" id="" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group pt-3">
+                            <input type="button" value="Entrar" class="col-12 btn btn-primary" />
+                        </div>
+                    </form>
+                    <div class="card-body d-flex justify-content-between">
+                        <a href="#" class="card-link">Esqueceu a senha?</a>
+                        <a href="#" class="card-link">Novo por aqui?</a>
+                    </div>
+                </div>
+                
+              </div>
 
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
-
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+          </div>
+      </div>
     </div>
 
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
-    </div>
-
-  </div>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-</div>
 </body>
 </html>
