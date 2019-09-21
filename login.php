@@ -26,8 +26,8 @@
                         </div>
                     </form>
                     <div class="d-flex justify-content-between">
-                        <a href="#" class="card-link">Esqueceu a senha?</a>
-                        <a href="./recuperar.php" class="card-link">Novo por aqui?</a>
+                        <a href="./recuperar.php" class="card-link">Esqueceu a senha?</a>
+                        <a href="./novo.php" class="card-link">Novo por aqui?</a>
                     </div>
                 </div>
                 
