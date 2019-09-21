@@ -14,7 +14,7 @@
               <div class="card">
                     <h3 class="card-header bg-info">Login</h3>
                 <div class="card-body">
-                    <form action="">
+                    <form action="" method="POST">
                         <div class="form-group">
                           <input type="text" class="form-control" placeholder="Usuario" />
                         </div>
@@ -27,7 +27,7 @@
                     </form>
                     <div class="d-flex justify-content-between">
                         <a href="#" class="card-link">Esqueceu a senha?</a>
-                        <a href="#" class="card-link">Novo por aqui?</a>
+                        <a href="./recuperar.php" class="card-link">Novo por aqui?</a>
                     </div>
                 </div>
                 
