@@ -6,9 +6,12 @@ html{
 }
 body{
     width: 100%; height: 100%;
-    border: 1px solid red;
     
 }
 h3{
     font-family: 'Mansalva', cursive;
+}
+.card{
+    box-shadow: 14px 10px 19px -12px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px;
 }

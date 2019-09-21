@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container col-6 h-100">
+  <div class="container col-8 h-100">
       <div class="d-flex h-100 align-items-center justify-content-around">
-          <div class="h-50 col-8 rounded">
 
               <div class="card">
-                    <h3 class="card-header">Login</h3>
+                    <h3 class="card-header bg-info">Login</h3>
                 <div class="card-body">
                     <form action="">
                         <div class="form-group">
@@ -26,7 +25,7 @@
                             <input type="button" value="Entrar" class="col-12 btn btn-primary" />
                         </div>
                     </form>
-                    <div class="card-body d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
                         <a href="#" class="card-link">Esqueceu a senha?</a>
                         <a href="#" class="card-link">Novo por aqui?</a>
                     </div>
@@ -34,7 +33,6 @@
                 
               </div>
 
-          </div>
       </div>
     </div>
 
