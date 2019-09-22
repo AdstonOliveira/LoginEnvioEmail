@@ -16,13 +16,13 @@
                 <div class="card-body">
                     <form action="./login.php" method="GET" id="renovarSenha">
                         <div class="form-group">
-                          <input type="password" id="senha" class="form-control" placeholder="Nova Senha" />
+                          <input type="password" id="senha" name="senha" class="form-control" placeholder="Nova Senha" />
                         </div>
                         <div class="form-group">
-                          <input type="password" id="cSenha" class="form-control" placeholder="Confirme a senha">
+                          <input type="password" id="cSenha" name="cSenha" class="form-control" placeholder="Confirme a senha">
                         </div>
                         <div class="form-group pt-3">
-                            <input type="button" id="recuperar" value="Enviar" class="col-12 btn btn-primary" />
+                            <input type="submit" id="recuperar" value="Enviar" class="col-12 btn btn-primary" />
                         </div>
                     </form>
                 </div>
@@ -31,22 +31,29 @@
 
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_pt_BR.min.js"></script>
 </body>
 <script>
 
-        // $("#recuperar").on("click", function(){
-        //     var senha = $("#senha").value
-        //     var cSenha= $("#cSenha").value
-
-        //     if(senha != cSenha){
-        //         alert("senhas nao conferem")
-        //     }else{
-        //         alert("Sao iguais")
-        //     }
-        // })
+      $(document).ready(function(){
+            $("#renovarSenha").validate({
+                rules: {
+                    senha: {
+                        required: true,
+                        minlength: 8
+                    }, cSenha: {
+                        required: true,
+                        equalTo: "#senha"
+                    }
+                }, messages:{
+                    senha: {minlength: "No mínimo 8 caracteres"},
+                    cSenha: {equalTo: "Senhas não conferem"}
+                }
+            });
+      });
 
 
 
