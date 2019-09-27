@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `login_nelson`.`rec_password` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `hash` VARCHAR(254) NULL DEFAULT NULL,
   `created_at` TIMESTAMP(2) NOT NULL DEFAULT CURRENT_TIMESTAMP(2) ON UPDATE NOW(),
-  `used` TINYINT(1) NOT NULL DEFAULT '0',
+  `ativo` TINYINT(1) NOT NULL DEFAULT '1',
   `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`, `cliente_id`),
   INDEX `fk_rec_password_cliente1_idx` (`cliente_id` ASC),
@@ -72,6 +72,11 @@ CREATE TABLE IF NOT EXISTS `login_nelson`.`rec_password` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+CREATE TRIGGER if not exists `cliente_create` BEFORE INSERT ON `cliente`
+ FOR EACH ROW SET NEW.created_at = NOW();
+ 
+ CREATE TRIGGER if not exists `rec_senha_create` BEFORE INSERT ON `rec_password`
+ FOR EACH ROW SET NEW.created_at = NOW();
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
