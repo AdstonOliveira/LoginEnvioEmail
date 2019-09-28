@@ -1,7 +1,6 @@
 <?php
 
 
-
 function getConn(){
     $username = "seguranca";
     $host = "127.0.0.1";
@@ -21,8 +20,5 @@ function getConn(){
         return $link;
 }
 
-function close(){
-    mysqli_close($con);
-}
 
 ?>

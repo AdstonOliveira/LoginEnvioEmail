@@ -15,7 +15,7 @@
               <div class="card">
                     <h3 class="card-header bg-info">Novo Cadastro</h3>
                 <div class="card-body">
-                    <form action="./php/insert.php" method="post" id="novo">
+                    <form action="./php/insert.php" method="POST" id="novo">
                         <div class="form-group">
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required />
                         </div>

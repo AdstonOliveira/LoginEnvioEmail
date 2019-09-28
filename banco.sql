@@ -26,8 +26,8 @@ USE `login_nelson` ;
 CREATE TABLE IF NOT EXISTS `login_nelson`.`cliente` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) not NULL,
-  `email` VARCHAR(45) not NULL,
-  `created_at` TIMESTAMP(2) not NULL DEFAULT now(),
+  `email` VARCHAR(45) not NULL UNIQUE,
+  `created_at` TIMESTAMP(2) NOT NULL DEFAULT NOW(),
   `deleted_at` TIMESTAMP(2) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
