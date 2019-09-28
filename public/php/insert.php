@@ -9,8 +9,6 @@
         $email= $_POST['email'];
         $senha = SHA1($_POST['senha']);
 
-        // echo $nome . $email . $senha;
-
         $sql = "insert into cliente (nome, email) values('$nome','$email')";
         $executar = mysqli_query($conn, $sql);
 
