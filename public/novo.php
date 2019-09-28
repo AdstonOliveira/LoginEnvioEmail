@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <?php include "./php/insert.php" ?> 
 <div class="container col-10 h-100">
       <div class="d-flex h-100 align-items-center justify-content-around">
             <div class="col-5">
               <div class="card">
                     <h3 class="card-header bg-info">Novo Cadastro</h3>
                 <div class="card-body">
-                    <form action="./login.php" method="get" id="novo">
+                    <form action="./php/insert.php" method="post" id="novo">
                         <div class="form-group">
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required />
                         </div>
@@ -48,48 +49,48 @@
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_pt_BR.min.js"></script>
 </body>
 <script>
-    $(document).ready(function(){
+    // $(document).ready(function(){
         
-        $("#novo").validate({
-            rules: {
-                nome: {
-                    required: true,
-                    minlength: 4,
-                    maxlength: 12,
-                }, senha: {
-                     required: true,
-                     minlength: 8,
-                     maxlength: 12,
-                }, confirmsenha: {
-                     required: true,
-                     equalTo: "#senha",
-                }, email: {
-                     required: true,
-                     email: true,
-                }, cemail: {
-                     required: true,
-                     equalTo: "#email",
-                }
-            },messages: {
-                nome: {
-                    required: "Obrigatório",
-                    minlength : "Minimo de 4 caracteres",
-                    maxlength: "Maximo 12 caracteres",
-                }, senha: {
-                    minlength: "No minimo 8 caracteres entre letras, numeros e caracter especial",
-                    maxlength: "No maximo 8 caracteres entre letras, numeros e caracter especial",
+    //     $("#novo").validate({
+    //         rules: {
+    //             nome: {
+    //                 required: true,
+    //                 minlength: 4,
+    //                 maxlength: 12,
+    //             }, senha: {
+    //                  required: true,
+    //                  minlength: 8,
+    //                  maxlength: 12,
+    //             }, confirmsenha: {
+    //                  required: true,
+    //                  equalTo: "#senha",
+    //             }, email: {
+    //                  required: true,
+    //                  email: true,
+    //             }, cemail: {
+    //                  required: true,
+    //                  equalTo: "#email",
+    //             }
+    //         },messages: {
+    //             nome: {
+    //                 required: "Obrigatório",
+    //                 minlength : "Minimo de 4 caracteres",
+    //                 maxlength: "Maximo 12 caracteres",
+    //             }, senha: {
+    //                 minlength: "No minimo 8 caracteres entre letras, numeros e caracter especial",
+    //                 maxlength: "No maximo 8 caracteres entre letras, numeros e caracter especial",
 
-                }, confirmsenha: {
-                    required: "A confirmação é obrigatória",
-                    equalTo: "As senhas não conferem"
-                }, email: {
-                    email: "Necessário um formato de email válido",
-                }, cemail: {
-                    equalTo: "O email não confere com o informado",
-                }
-            }
+    //             }, confirmsenha: {
+    //                 required: "A confirmação é obrigatória",
+    //                 equalTo: "As senhas não conferem"
+    //             }, email: {
+    //                 email: "Necessário um formato de email válido",
+    //             }, cemail: {
+    //                 equalTo: "O email não confere com o informado",
+    //             }
+    //         }
         
-        });
-    });
+    //     });
+    // });
 </script>
 </html>
