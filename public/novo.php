@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <?php include "./php/insert.php" ?> 
 <div class="container col-10 h-100">
       <div class="d-flex h-100 align-items-center justify-content-around">
             <div class="col-5">
