@@ -1,10 +1,14 @@
-<?php include_once('./includes/template.php') ?> 
+<?php include('./includes/topo.php') ?> 
+<body>
+<?php include('./includes/menu.php'); ?>
+    <div class="border h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-4">
 
-<div class="container col-10 h-100">
-      <div class="d-flex h-100 align-items-center justify-content-around">
-            <div class="col-5">
               <div class="card">
-                    <h3 class="card-header bg-info">Novo Cadastro</h3>
+                    <div class="card-header text-center bg-dark text-light">
+                        <h3>Novo Cadastro</h3>
+                    </div>
                 <div class="card-body">
                     <form action="./php/insert.php" method="POST" id="novo">
                         <div class="form-group">
@@ -37,7 +41,8 @@
  <?php include_once('./includes/scripts.php')  ?>
 </body>
 <script>
-    // $(document).ready(function(){
+    $(document).ready(function(){
+        $("#novo").attr("class","active");
         
     //     $("#novo").validate({
     //         rules: {
