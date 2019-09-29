@@ -1,16 +1,16 @@
 <?php include('./includes/topo.php') ?> 
 <body>
 <?php include('./includes/menu.php'); ?>
-    <div class="border h-100">
+    <div class="h-100">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-4">
 
-              <div class="card">
+              <div class="card shadow">
                     <div class="card-header text-center bg-dark text-light">
                         <h3>Novo Cadastro</h3>
                     </div>
                 <div class="card-body">
-                    <form action="./php/insert.php" method="POST" id="novo">
+                    <form action="../php/insert.php" method="POST" id="novo">
                         <div class="form-group">
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required />
                         </div>
@@ -26,9 +26,9 @@
                         <div class="form-group">
                           <input type="password" name="confirmsenha" id="confirmsenha" class="form-control" placeholder="Confirme a senha">
                         </div>
-                        <div class="form-group pt-3 d-flex justify-content-between">
+                        <div class="form-group d-flex justify-content-between">
                             <input type="submit" id="cadastrar" value="Cadastrar" class="col-5 btn btn-primary" />
-                            <input type="reset" value="Limpar" class="col-5 btn" />
+                            <input type="reset" value="Limpar" class="btn btn-secondary col-5" />
                         </div>
                     </form>
                 </div>
@@ -42,8 +42,8 @@
 </body>
 <script>
     $(document).ready(function(){
-        $("#novo").attr("class","active");
-        
+        $("#menu_novo").attr("class","active");
+    });
     //     $("#novo").validate({
     //         rules: {
     //             nome: {

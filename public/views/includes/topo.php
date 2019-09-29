@@ -1,4 +1,12 @@
+<?php session_start();
+var_dump($_SESSION);
+if( !isset($_SESSION['err']) ){
+    unset($_SESSION['err']);
+}
+
+?>
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">

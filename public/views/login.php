@@ -1,15 +1,26 @@
-<?php  include('./includes/topo.php'); ?>
+<?php include('./includes/topo.php'); ?>
 <body>
 <?php include('./includes/menu.php'); ?>
+<div id="msg" >
+
+<?php 
+if(isset($_SESSION['err']))
+  echo $_SESSION['err'];
+
+?>
+</div>
 
 <div class="border h-100">
   <div class="row h-100 justify-content-center align-items-center">
     <div class="col-4">
 
-      <div class="card">
+      <div class="card shadow">
         <div class="card-header text-center bg-dark text-light"><h3>Login</h3></div>
         <div class="card-body">
-          <form action="" method="POST" id="form">
+          <form action="../php/login.php" method="POST" id="form">
+            <div class="form-group">
+              <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+            </div>
             <div class="form-group">
               <input type="email" class="form-control" name="email" id="usuario" placeholder="email" />
             </div>
@@ -35,7 +46,8 @@
 <script>
   $(document).ready(function() {
     $("#login").attr("class","active");
-
+  
+    
     $("#form").validate({
       rules: {
         usuario: {

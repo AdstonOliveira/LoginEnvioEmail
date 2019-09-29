@@ -5,7 +5,7 @@
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-4">
 
-                <div class="card">
+                <div class="card shadow">
                     <div class="card-header text-center bg-dark text-light">
                         <h3>Recuperação de senha</h3>
                     </div>
