@@ -1,9 +1,8 @@
 <?php 
-    // session_start();
 
     include 'conexao.php';
     include 'comparaSenha.php';
-
+    
     $conn = getConn();
 
     $nome = mysqli_real_escape_string($conn,$_POST['nome']);
@@ -18,10 +17,8 @@
         $senha = mysqli_real_escape_string($conn, SHA1($_POST['senha'].$created) );
         
         if(comparaSenha($row[0], $senha)){
-            echo "Senhas iguais";
             header('location:../views/teste.html');
         }else{
-            $_SESSION['err'] = "a";
             header("location:../views/login.php");
         }
         /* free result set */

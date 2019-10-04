@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+    session_start();
     include 'conexao.php';
 
     $conn = getConn();
@@ -19,6 +19,8 @@
         mysqli_free_result($value);
 
         $sql2= "insert into password (password, cliente_id) values( '$senha', $id )";
+        
         mysqli_query($conn, $sql2);
         $conn->close();
+        header('location:../views/login.php');
 ?>

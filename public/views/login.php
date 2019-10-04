@@ -1,14 +1,11 @@
-<?php include('./includes/topo.php'); ?>
+<?php 
+if(session_status() !== PHP_SESSION_ACTIVE){
+  session_cache_expire(-1);
+    session_start(); 
+}
+include('./includes/topo.php'); ?>
 <body>
 <?php include('./includes/menu.php'); ?>
-<div id="msg" >
-
-<?php 
-if(isset($_SESSION['err']))
-  echo $_SESSION['err'];
-
-?>
-</div>
 
 <div class="border h-100">
   <div class="row h-100 justify-content-center align-items-center">
@@ -32,8 +29,8 @@ if(isset($_SESSION['err']))
             </div>
           </form>
           <div class="d-flex justify-content-between">
-            <a href="./public/novo.php" class="card-link">Novo por aqui?</a>
-            <a href="./public/recuperar.php" class="card-link">Esqueceu a senha?</a>
+            <a href="./novo.php" class="card-link">Novo por aqui?</a>
+            <a href="./solicitar_nova_senha.php" class="card-link">Esqueceu a senha?</a>
           </div>
         </div>
 

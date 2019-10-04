@@ -1,10 +1,6 @@
-<?php session_start();
-var_dump($_SESSION);
-if( !isset($_SESSION['err']) ){
-    unset($_SESSION['err']);
-}
-
-?>
+<?php 
+    
+    ?>
 <!DOCTYPE html>
 
 <html lang="pt-br">
