@@ -1,8 +1,10 @@
 <?php 
+
 if(session_status() !== PHP_SESSION_ACTIVE){
   session_cache_expire(-1);
     session_start(); 
 }
+
 include('./includes/topo.php'); ?>
 <body>
 <?php include('./includes/menu.php'); ?>

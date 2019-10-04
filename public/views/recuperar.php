@@ -10,16 +10,17 @@
                         <h3>Recuperação de senha</h3>
                     </div>
                     <div class="card-body">
-                        <form action="./login.php" method="GET" id="renovarSenha">
+                        <form action="../php/valid_hash.php" method="POST" id="renovarSenha">
                             <div class="form-group">
-                                <input type="password" id="senha" name="senha" class="form-control" placeholder="Nova Senha" />
+                                <input type="password" id="senha" name="senha" class="form-control" required placeholder="Nova Senha" />
                             </div>
                             <div class="form-group">
-                                <input type="password" id="cSenha" name="cSenha" class="form-control" placeholder="Confirme a senha">
+                                <input type="password" id="cSenha" name="cSenha" class="form-control" required placeholder="Confirme a senha">
                             </div>
                             <div class="form-group pt-3">
                                 <input type="submit" id="recuperar" value="Enviar" class="col-12 btn btn-primary" />
                             </div>
+                            <input type="hidden" name="hash" value="<?php echo $_GET['hash'] ?>">
                         </form>
                     </div>
 

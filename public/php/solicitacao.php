@@ -16,26 +16,22 @@
         $cliente_email = sha1($row[2]);
         $cliente_created = sha1($row[3]);
         
-        $validHash = sha1($cliente_id.$cliente_nome.$cliente_email.$cliente_created);
+        $validHash = sha1($cliente_id.$cliente_nome.$cliente_email.$cliente_created.date('d/m/y H:i:s'));
 
         save($validHash, $cliente_id);
+
+        echo "<a href='http://localhost/LoginNelson/public/views/recuperar.php?hash=$validHash'>Clique </a>";
 
         include './phpmail/envio.php';
 
         define('email',"$email");
         $_SESSION['mensagem'] = 
-        "<a href='http://localhost/LoginNelson/public/php/recuperar.php/$validHash'>Clique aqui</a>";
+        "<a href='http://localhost/LoginNelson/public/views/recuperar.php?hash=$validHash'>Clique aqui</a>";
 
-        // if(comparaSenha($row[0], $senha)){
-        //     header('location:../views/teste.html');
-        // }else{
-        //     header("location:../views/login.php");
-        // }
-        /* free result set */
     }else{
         echo "email inválido";
     }
-    
+        
     
      function save($hash, $id){
         $conn = getConn();
