@@ -14,9 +14,9 @@ require_once 'arquivos/class.smtp.php';
  $mail->Host = "smtp.gmail.com"; // Servidor SMTP
  $mail->Port = 465; 
  $mail->SMTPAuth = true; // Caso o servidor SMTP precise de autenticação
- $mail->Username = "suportetecnico.adston@gmail.com"; // SMTP username
- $mail->Password = "Adstom1988."; // SMTP password
- $mail->From = "suportetecnico.adston@gmail.com"; // From
+ $mail->Username = ""; // SMTP username
+ $mail->Password = ""; // SMTP password
+ $mail->From = ""; // From
  $mail->SMTPSecure = "ssl";
  $mail->FromName = "Login_Nelson" ; // Nome de quem envia o email
  $mail->AddAddress($email, "Cliente"); // Email e nome de quem receberá //Responder
