@@ -2,9 +2,9 @@
 
 
 function getConn(){
-    $username = "soos";
+    $username = "";
     $host = "127.0.0.1";
-    $password="Defusr1303.";
+    $password="";
     $database="login_nelson";
     
         $link = mysqli_connect($host, $username, $password, $database) ;
