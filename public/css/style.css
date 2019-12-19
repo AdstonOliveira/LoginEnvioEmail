@@ -1,0 +1,18 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap');
+
+html{
+    width: 100vw; height: 100vh;
+}
+body{
+    min-width: 100%; min-height: 100%;
+    background-color: aquamarine;
+}
+
+h3{
+    font-family: 'Mansalva', cursive;
+}
+.card{
+    box-shadow: 14px 10px 19px -12px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px;
+}
